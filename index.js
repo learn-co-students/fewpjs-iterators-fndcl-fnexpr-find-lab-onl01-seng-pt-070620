@@ -1,5 +1,4 @@
-function superbowlWin(records) {
-  records.forEach(record => function(record) {
-    record.find(function(s) { if (s.result === "W") { return s.year } else { return undefined }})
-  })
+superbowlWin = (record) => {
+  let result = record.find(record => record.result === "W")
+  return !!result ? result.year : undefined
 }
